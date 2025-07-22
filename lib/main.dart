@@ -4,6 +4,8 @@ import 'package:fl_chart/fl_chart.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,6 +28,8 @@ class Trade {
 }
 
 class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({super.key});
+
   @override
   _DashboardScreenState createState() => _DashboardScreenState();
 }
@@ -190,7 +194,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(title, style: TextStyle(color: color, fontSize: 14)),
-            Text("$value", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18))
+            Text(value, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18))
           ],
         ),
       ),
