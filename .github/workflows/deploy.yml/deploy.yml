@@ -29,3 +29,13 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: build/web
+
+      - name: Enable web support
+        run: flutter config --enable-web
+        
+      - run: flutter build web --base-href=/dashboardscreen/
+
+      - name: Build web
+  run: flutter build web --web-renderer=auto --base-href=/dashboardscreen/
+
+
